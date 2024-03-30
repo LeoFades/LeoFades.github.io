@@ -1,0 +1,58 @@
+/*Font imports*/
+.outfit-regular {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.outfit-medium {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+
+/*Colour*/
+:root {
+    --ashGrey: #C5BFBF;
+}
+
+
+/*Nav Bar*/
+
+body {
+    overflow: hidden;
+    font-family: "Outfit", sans-serif;
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 10% 10px 7%;
+    color: var(--ashGrey);
+
+
+}
+
+.name {
+    display: flex;
+
+}
+
+.name div {
+    width: 135px;
+    padding: 0 2% 0 2%;
+}
+
+.navItems {
+    display: flex;
+    width: 300px;
+}
+
+.navItems div {
+    margin: 0 7% 0 2%;
+
+}
