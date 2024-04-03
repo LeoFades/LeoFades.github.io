@@ -18,27 +18,43 @@
 /*Colour*/
 :root {
     --ashGrey: #C5BFBF;
+    --lightGrey: #DCDEE0;
+    --darkBrown: #2D1E1E;
+    --offWhite: #d3c1c1;
+    --darkNavy: #10191F;
+}
+
+/* All Settings */
+
+body {
+    overflow-x: hidden;
+    font-family: "Outfit", sans-serif;
+    margin: 0px;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 
 /*Nav Bar*/
 
-body {
-    overflow: hidden;
-    font-family: "Outfit", sans-serif;
-}
+
 
 .navBar {
     display: flex;
     justify-content: space-between;
-    margin: 25px 10% 10px 7%;
+    padding: 30px 50px 10px 0px;
     color: var(--ashGrey);
+    width: 100vw;
 
 
 }
 
 .name {
     display: flex;
+    padding-left: 100px;
 
 }
 
@@ -49,10 +65,130 @@ body {
 
 .navItems {
     display: flex;
+    justify-content: space-around;
     width: 300px;
+    padding-right: 100px;
 }
 
-.navItems div {
-    margin: 0 7% 0 2%;
+.navItems a {
+    text-decoration: none;
+    color: var(--ashGrey);
+    transition: all 0.3s ease 0s;
+}
 
+.navItems a:hover {
+    color: var(--lightGrey);
+}
+
+/*Hero*/
+
+.hero {
+    background-image: linear-gradient(to bottom, rgba(25, 21, 22, 0.8),
+            rgba(25, 21, 22, 0.6),
+            rgba(25, 21, 22, 0.2)), url("image/heroMainBg.jpg");
+    background-position-y: -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.cutout {
+    background-image: url("image/heroCutout.png");
+    background-position-y: -100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    z-index: 1;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.greetings {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    color: var(--offWhite);
+    font-size: 180px;
+
+}
+
+.greetings .line1 {
+
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.greetings .line2 {
+    position: absolute;
+    z-index: 2;
+    transition: all 0.3s ease 0s;
+}
+
+.greetings .line2:hover {
+    opacity: 0.8;
+}
+
+/*quote*/
+.quote {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--ashGrey);
+    color: var(--darkBrown);
+
+}
+
+
+.quote .text .line1 {
+    padding: 60px 150px 2px 0px;
+
+}
+
+.quote .text .line2 {
+    padding: 5px 0px 60px 150px;
+}
+
+/* About */
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 50px 0;
+    color: var(--ashGrey);
+    background-color: var(--darkNavy);
+}
+
+.about img {
+    width: 20%;
+    height: 40%
+}
+
+.about .text {
+    padding-left: 30px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .title {
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.about .descBox {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about .desc {
+    font-size: 18px;
 }
